@@ -1,0 +1,5 @@
+test=data.frame(t(dat6['Ptpn6',]))
+test$cate=c(rep(c("trt","ctrl"),each=4))
+
+library(ggplot2)
+ggplot(test,aes(x=cate,y=Ptpn6,fill=cate))+geom_boxplot()+labs(title = "3day-mcao ,adj-p=0.8364593")
